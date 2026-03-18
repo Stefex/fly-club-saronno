@@ -1,13 +1,8 @@
 import type { Metadata } from "next";
-import { CardSoci } from "@/components/card/CardStoriaSoci";
 import { CardBenvenuto } from "@/components/card/CardBenvenuto";
 import { CardStoriaSoci } from "@/components/card/CardStoriaSoci";
 import React from "react";
-import MonthlyTarget from "@/components/card/MonthlyTarget";
-import MonthlySalesChart from "@/components/card/MonthlySalesChart";
-import StatisticsChart from "@/components/card/StatisticsChart";
 import RecentOrders from "@/components/card/RecentOrders";
-import DemographicCard from "@/components/card/DemographicCard";
 
 export const metadata: Metadata = {
   title:
