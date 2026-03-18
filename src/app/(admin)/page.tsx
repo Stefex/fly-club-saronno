@@ -6,8 +6,8 @@ import RecentOrders from "@/components/card/RecentOrders";
 
 export const metadata: Metadata = {
   title:
-    "Fly Angling Club Saronno E-commerce Dashboard | TailAdmin - Fly Angling Club Saronno Dashboard Template",
-  description: "This is Fly Angling Club Saronno Home for TailAdmin Dashboard Template",
+    "Fly Club Saronno",
+  description: "App del Fly Club Saronno",
 };
 
 export default function Home() {

@@ -794,3 +794,48 @@ aside {
 .text-white{
    color:#d0d5dd;
 }
+
+.header-black{
+  background-color: #101828;
+  border:0;
+  color: #151922;
+}
+
+.toggle-menu-button{
+  background-color: #1d2939;
+  color:#d0d5dd;
+}
+
+.logo-sidebar{
+  width:35%;
+  
+}
+
+.logo-sidebar-container{
+text-align: -webkit-center;
+}
+
+@media (max-width: 768px) {
+  .logo-sidebar{
+  width:15%;
+  }
+  .logo-sidebar-container{
+  display: none;
+  }
+  aside{
+    width:100%;
+    margin-top:8.5em!important
+  }
+  .border-bottom-1px{
+    border-bottom: 1px solid #344054;
+  }
+  .logo-sidebar svg{
+    display: none;
+  }
+  .toggle-menu-button {
+    color: #d0d5dd;
+    background-color: #1d2939;
+    width: 2.1em!important;
+    height: 2.1em!important;
+}
+}
