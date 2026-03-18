@@ -15,7 +15,7 @@ export const MenuMobile = () => {
   return (
 
 
-<div className="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2 bg-neutral-primary-soft bottom-0 left-1/2 menu-black lg:hidden">
+<div className="fixed z-50 w-full h-18 max-w-lg -translate-x-1/2 bg-neutral-primary-soft bottom-0 left-1/2 menu-black lg:hidden">
     <div className="grid h-full max-w-lg grid-cols-5 mx-auto ">
         
           <Link href="/" className={`menu-item first-item ${pathname === ("/") ? "active" : ""}`}>
