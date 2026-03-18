@@ -842,6 +842,9 @@ text-align: -webkit-center;
 
 .menu-item.active{
   background-color: #344054;
+  border-radius: 0;
 }
-
+.menu-item.first-item {
+  padding-left:20px
+}
 }
