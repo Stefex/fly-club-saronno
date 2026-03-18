@@ -40,7 +40,7 @@ const navItems: NavItem[] = [
   {
     icon: <UserCircleIcon />,
     name: "Consiglio Direttivo",
-    path: "/profile",
+    path: "/consiglio-direttivo",
   },
 
   {

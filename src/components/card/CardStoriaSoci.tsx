@@ -5,6 +5,8 @@ import { ArrowDownIcon,  ArrowRightIcon, BoxIconLine, GroupIcon, DocsIcon } from
 import ComponentCard from "@/components/common/ComponentCard";
 import PageBreadcrumb from "@/components/common/PageBreadCrumb";
 import Button from "@/components/ui/button/Button"; 
+import Link from "next/link";
+
 
 export const CardStoriaSoci = () => {
   return (
@@ -25,9 +27,11 @@ export const CardStoriaSoci = () => {
               40 Soci
             </h4>
           </div>
-          <Button size="md" variant="primary" endIcon={<ArrowRightIcon/>}>
-              Scopri di più
-            </Button>
+          <Link href="/consiglio-direttivo">
+            <Button  size="md" variant="primary" endIcon={<ArrowRightIcon/>}>
+                Consiglio Direttivo
+              </Button>
+          </Link>
         </div>
       </div>
       {/* <!-- Metric Item End --> */}
