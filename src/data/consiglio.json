@@ -1,0 +1,34 @@
+{
+"consiglio_direttivo": [
+        {
+            "ruolo": "Presidente",
+            "nome": "Stefano",
+            "cognome": "Giudici",
+            "foto": "user-01.jpg"
+        },
+        {
+            "ruolo": "Vicepresidente",
+            "nome": "Nome",
+            "cognome": "Cognome",
+            "foto": "user-02.jpg"
+        },
+        {
+            "ruolo": "Tesoriere",
+            "nome": "AAA",
+            "cognome": "BBBB",
+            "foto": "user-03.jpg"
+        }, {
+
+            "ruolo": "PROVA",
+            "nome": "CCC",
+            "cognome": "VVVV",
+            "foto": "user-04.jpg"
+        },
+         {
+            "ruolo": "Prova2",
+            "nome": "5555",
+            "cognome": "222222",
+            "foto": "user-05.jpg"
+        }
+    ]
+}
