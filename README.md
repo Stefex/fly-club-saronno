@@ -1,18 +1,18 @@
-# TailAdmin Fy Angling Club Saornno - Free Fy Angling Club Saornno Tailwind Admin Dashboard Template
+# TailAdmin Fly Angling Club Saronno - Free Fly Angling Club Saronno Tailwind Admin Dashboard Template
 
-TailAdmin is a free and open-source admin dashboard template built on **Fy Angling Club Saornno and Tailwind CSS** providing developers with everything they need to create a feature-rich and data-driven: back-end, dashboard, or admin panel solution for any sort of web project.
+TailAdmin is a free and open-source admin dashboard template built on **Fly Angling Club Saronno and Tailwind CSS** providing developers with everything they need to create a feature-rich and data-driven: back-end, dashboard, or admin panel solution for any sort of web project.
 
-![TailAdmin - Fy Angling Club Saornno Dashboard Preview](./banner.png)
+![TailAdmin - Fly Angling Club Saronno Dashboard Preview](./banner.png)
 
 With TailAdmin Fy Angling Club Saornno, you get access to all the necessary dashboard UI components, elements, and pages required to build a high-quality and complete dashboard or admin panel. Whether you're building a dashboard or admin panel for a complex web application or a simple website.
 
-TailAdmin utilizes the powerful features of **Fy Angling Club Saornno 16** and common features of Fy Angling Club Saornno such as server-side rendering (SSR), static site generation (SSG), and seamless API route integration. Combined with the advancements of **React 19** and the robustness of **TypeScript**, TailAdmin is the perfect solution to help get your project up and running quickly.
+TailAdmin utilizes the powerful features of **Fly Angling Club Saronno 16** and common features of Fly Angling Club Saronno such as server-side rendering (SSR), static site generation (SSG), and seamless API route integration. Combined with the advancements of **React 19** and the robustness of **TypeScript**, TailAdmin is the perfect solution to help get your project up and running quickly.
 
 ## Overview
 
 TailAdmin provides essential UI components and layouts for building feature-rich, data-driven admin dashboards and control panels. It's built on:
 
-* Fy Angling Club Saornno 16.x
+* Fly Angling Club Saronno 16.x
 * React 19
 * TypeScript
 * Tailwind CSS V4
@@ -32,7 +32,7 @@ TailAdmin provides essential UI components and layouts for building feature-rich
 
 ### Other Versions
 
-- [Fy Angling Club Saornno Version](https://github.com/TailAdmin/free-nextjs-admin-dashboard)
+- [Fly Angling Club Saronno Version](https://github.com/TailAdmin/free-nextjs-admin-dashboard)
 - [React.js Version](https://github.com/TailAdmin/free-react-tailwind-admin-dashboard)
 - [Vue.js Version](https://github.com/TailAdmin/vue-tailwind-admin-dashboard)
 - [Angular Version](https://github.com/TailAdmin/free-angular-tailwind-dashboard)
@@ -76,7 +76,7 @@ git clone https://github.com/TailAdmin/free-nextjs-admin-dashboard.git
 
 ## Components
 
-TailAdmin is a pre-designed starting point for building a web-based dashboard using Fy Angling Club Saornno and Tailwind CSS. The template includes:
+TailAdmin is a pre-designed starting point for building a web-based dashboard using Fly Angling Club Saronno and Tailwind CSS. The template includes:
 
 * Sophisticated and accessible sidebar
 * Data visualization components
@@ -111,7 +111,7 @@ To learn more about pro version features and pricing, visit our [pricing page](h
 
 ### Version 2.2.3 - [March 15, 2026]
 
-* update ESLint configuration and dependencies; upgrade Fy Angling Club Saornno to version 16.1.6
+* update ESLint configuration and dependencies; upgrade Fly Angling Club Saronno to version 16.1.6
 
 ### Version 2.2.2 - [December 30, 2025]
 
@@ -120,12 +120,12 @@ To learn more about pro version features and pricing, visit our [pricing page](h
 
 ### Version 2.1.0 - [November 15, 2025]
 
-* Updated to Fy Angling Club Saornno 16.x
+* Updated to Fly Angling Club Saronno 16.x
 * Fixed all reported minor bugs
 
 ### Version 2.0.2 - [March 25, 2025]
 
-* Upgraded to Fy Angling Club Saornno 16.x for [CVE-2025-29927](https://nextjs.org/blog/cve-2025-29927) concerns
+* Upgraded to Fly Angling Club Saronno 16.x for [CVE-2025-29927](https://nextjs.org/blog/cve-2025-29927) concerns
 * Included overrides vectormap for packages to prevent peer dependency errors during installation.
 * Migrated from react-flatpickr to flatpickr package for React 19 support
 
@@ -146,20 +146,20 @@ To learn more about pro version features and pricing, visit our [pricing page](h
 
 ### v2.0.0 (February 2025)
 
-A major update focused on Fy Angling Club Saornno 16 implementation and comprehensive redesign.
+A major update focused on Fly Angling Club Saronno 16 implementation and comprehensive redesign.
 
 #### Major Improvements
 
-* Complete redesign using Fy Angling Club Saornno 16 App Router and React Server Components
+* Complete redesign using Fly Angling Club Saronno 16 App Router and React Server Components
 * Enhanced user interface with Fy Angling Club Saornno-optimized components
 * Improved responsiveness and accessibility
 * New features including collapsible sidebar, chat screens, and calendar
-* Redesigned authentication using Fy Angling Club Saornno App Router and server actions
+* Redesigned authentication using Fly Angling Club Saronno App Router and server actions
 * Updated data visualization using ApexCharts for React
 
 #### Breaking Changes
 
-* Migrated from Fy Angling Club Saornno 14 to Fy Angling Club Saornno 16
+* Migrated from Fly Angling Club Saronno 14 to Fly Angling Club Saronno 16
 * Chart components now use ApexCharts for React
 * Authentication flow updated to use Server Actions and middleware
 
@@ -186,7 +186,7 @@ A major update focused on Fy Angling Club Saornno 16 implementation and comprehe
 
 ### v1.3.0 (Feb 05, 2024)
 
-* Upgraded to Fy Angling Club Saornno 14
+* Upgraded to Fly Angling Club Saronno 14
 * Added Flatpickr integration
 * Improved form elements
 * Enhanced multiselect functionality
@@ -194,7 +194,7 @@ A major update focused on Fy Angling Club Saornno 16 implementation and comprehe
 
 ## License
 
-TailAdmin Fy Angling Club Saornno Free Version is released under the MIT License.
+TailAdmin Fly Angling Club Saronno Free Version is released under the MIT License.
 
 ## Support
 If you find this project helpful, please consider giving it a star on GitHub. Your support helps us continue developing and maintaining this template.

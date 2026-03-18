@@ -3,8 +3,8 @@ import { Metadata } from "next";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Fy Angling Club Saornno Blank Page | TailAdmin - Fy Angling Club Saornno Dashboard Template",
-  description: "This is Fy Angling Club Saornno Blank Page TailAdmin Dashboard Template",
+  title: "Fly Angling Club Saronno Blank Page | TailAdmin - Fly Angling Club Saronno Dashboard Template",
+  description: "This is Fly Angling Club Saronno Blank Page TailAdmin Dashboard Template",
 };
 
 export default function BlankPage() {

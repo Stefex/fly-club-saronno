@@ -5,9 +5,9 @@ import Link from "next/link";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Fy Angling Club Saornno Error 404 | TailAdmin - Fy Angling Club Saornno Dashboard Template",
+  title: "Fly Angling Club Saronno Error 404 | TailAdmin - Fly Angling Club Saronno Dashboard Template",
   description:
-    "This is Fy Angling Club Saornno Error 404 page for TailAdmin - Fy Angling Club Saornno Tailwind CSS Admin Dashboard Template",
+    "This is Fly Angling Club Saronno Error 404 page for TailAdmin - Fly Angling Club Saronno Tailwind CSS Admin Dashboard Template",
 };
 
 export default function Error404() {

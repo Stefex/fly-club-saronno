@@ -1,37 +1,31 @@
 import type { Metadata } from "next";
-import { EcommerceMetrics } from "@/components/ecommerce/EcommerceMetrics";
+import { CardSoci } from "@/components/card/CardStoriaSoci";
+import { CardBenvenuto } from "@/components/card/CardBenvenuto";
+import { CardStoriaSoci } from "@/components/card/CardStoriaSoci";
 import React from "react";
-import MonthlyTarget from "@/components/ecommerce/MonthlyTarget";
-import MonthlySalesChart from "@/components/ecommerce/MonthlySalesChart";
-import StatisticsChart from "@/components/ecommerce/StatisticsChart";
-import RecentOrders from "@/components/ecommerce/RecentOrders";
-import DemographicCard from "@/components/ecommerce/DemographicCard";
+import MonthlyTarget from "@/components/card/MonthlyTarget";
+import MonthlySalesChart from "@/components/card/MonthlySalesChart";
+import StatisticsChart from "@/components/card/StatisticsChart";
+import RecentOrders from "@/components/card/RecentOrders";
+import DemographicCard from "@/components/card/DemographicCard";
 
 export const metadata: Metadata = {
   title:
-    "Fy Angling Club Saornno E-commerce Dashboard | TailAdmin - Fy Angling Club Saornno Dashboard Template",
-  description: "This is Fy Angling Club Saornno Home for TailAdmin Dashboard Template",
+    "Fly Angling Club Saronno E-commerce Dashboard | TailAdmin - Fly Angling Club Saronno Dashboard Template",
+  description: "This is Fly Angling Club Saronno Home for TailAdmin Dashboard Template",
 };
 
-export default function Ecommerce() {
+export default function Home() {
   return (
-    <div className="grid grid-cols-12 gap-4 md:gap-6">
+    
+    <div className="grid md:gap-6 w-full">
+       <div className="col-span-12 space-y-6 xl:col-span-7">
+        <CardBenvenuto/>
+
+      </div>
       <div className="col-span-12 space-y-6 xl:col-span-7">
-        <EcommerceMetrics />
+        <CardStoriaSoci />
 
-        <MonthlySalesChart />
-      </div>
-
-      <div className="col-span-12 xl:col-span-5">
-        <MonthlyTarget />
-      </div>
-
-      <div className="col-span-12">
-        <StatisticsChart />
-      </div>
-
-      <div className="col-span-12 xl:col-span-5">
-        <DemographicCard />
       </div>
 
       <div className="col-span-12 xl:col-span-7">

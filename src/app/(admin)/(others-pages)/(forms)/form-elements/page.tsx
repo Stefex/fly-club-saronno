@@ -13,9 +13,9 @@ import { Metadata } from "next";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Fy Angling Club Saornno Form Elements | TailAdmin - Fy Angling Club Saornno Dashboard Template",
+  title: "Fly Angling Club Saronno Form Elements | TailAdmin - Fly Angling Club Saronno Dashboard Template",
   description:
-    "This is Fy Angling Club Saornno Form Elements page for TailAdmin - Fy Angling Club Saornno Tailwind CSS Admin Dashboard Template",
+    "This is Fly Angling Club Saronno Form Elements page for TailAdmin - Fly Angling Club Saronno Tailwind CSS Admin Dashboard Template",
 };
 
 export default function FormElements() {

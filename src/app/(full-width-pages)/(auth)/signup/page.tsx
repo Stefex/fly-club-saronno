@@ -2,8 +2,8 @@ import SignUpForm from "@/components/auth/SignUpForm";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Fy Angling Club Saornno SignUp Page | TailAdmin - Fy Angling Club Saornno Dashboard Template",
-  description: "This is Fy Angling Club Saornno SignUp Page TailAdmin Dashboard Template",
+  title: "Fly Angling Club Saronno SignUp Page | TailAdmin - Fly Angling Club Saronno Dashboard Template",
+  description: "This is Fly Angling Club Saronno SignUp Page TailAdmin Dashboard Template",
   // other metadata
 };
 

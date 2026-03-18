@@ -4,9 +4,9 @@ import { Metadata } from "next";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Fy Angling Club Saornno Calender | TailAdmin - Fy Angling Club Saornno Dashboard Template",
+  title: "Fly Angling Club Saronno Calender | TailAdmin - Fly Angling Club Saronno Dashboard Template",
   description:
-    "This is Fy Angling Club Saornno Calender page for TailAdmin  Tailwind CSS Admin Dashboard Template",
+    "This is Fly Angling Club Saronno Calender page for TailAdmin  Tailwind CSS Admin Dashboard Template",
   // other metadata
 };
 export default function page() {

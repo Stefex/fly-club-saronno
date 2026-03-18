@@ -750,3 +750,43 @@ span.flatpickr-weekday,
   opacity: 0.8;
   cursor: grabbing; /* Changes the cursor to indicate dragging */
 }
+
+.principal-box{
+  background-color: #101828
+}
+
+aside {
+  background-color: #101828;
+  border-right:1px solid #344054;
+}
+
+.menu-item{
+  color:#d0d5dd;
+  transition: 0.1s;
+}
+
+.menu-item-icon-inactive{
+  color:#d0d5dd;
+  transition: 0.1s;
+}
+
+.menu-item:hover  span.menu-item-text{
+  color: #151922;
+  transition: 0.1s;
+}
+
+.menu-item:hover svg path {
+    fill: rgb(70, 95, 255);
+    transition: 0.1s;
+}
+
+.menu-item-active span.menu-item-text{
+  color: #151922;
+}
+
+.box-card{
+  background-color: #1d2939;
+  border:0;
+  color: rgb(255, 255, 255, 90);
+  border-radius:20px
+}
