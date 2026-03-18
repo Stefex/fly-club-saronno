@@ -839,4 +839,8 @@ text-align: -webkit-center;
   border-top: 1px solid #344054;
   color:#d0d5dd;
 }
+
+.menu-item.active{
+  background-color: aqua;
+}
 }
