@@ -2,6 +2,7 @@
 import SocioInfo from "@/components/user-profile/SocioInfo";
 import { Metadata } from "next";
 import React from "react";
+import { MenuMobile } from "@/components/common/MenuMobile";
 
 
 
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
 
 export default function Profile() {
   return (
+    <>
     <div>
       <div className="rounded-2xl p-5 lg:p-6 principal-box">
         <div className="">
@@ -27,5 +29,7 @@ export default function Profile() {
         </div>
             </div>  
       </div>
+      <MenuMobile />
+      </>
   );
 }

@@ -823,8 +823,7 @@ text-align: -webkit-center;
   display: none;
   }
   aside{
-    width:100%;
-    margin-top:8.5em!important
+    display: none;
   }
   .border-bottom-1px{
     border-bottom: 1px solid #344054;
@@ -833,9 +832,11 @@ text-align: -webkit-center;
     display: none;
   }
   .toggle-menu-button {
-    color: #d0d5dd;
-    background-color: #1d2939;
-    width: 2.1em!important;
-    height: 2.1em!important;
+    display: none;
+}
+.menu-black{
+  background-color: #101828;
+  border-top: 1px solid #344054;
+  color:#d0d5dd;
 }
 }
