@@ -12,6 +12,7 @@ import {
 } from "@fullcalendar/core";
 import { useModal } from "@/hooks/useModal";
 import { Modal } from "@/components/ui/modal";
+import { MenuMobile } from "../common/MenuMobile";
 
 interface CalendarEvent extends EventInput {
   extendedProps: {
@@ -121,6 +122,7 @@ const Calendar: React.FC = () => {
   };
 
   return (
+    <>
     <div className="rounded-2xl border  border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03]">
       <div className="custom-calendar">
         <FullCalendar
@@ -264,6 +266,8 @@ const Calendar: React.FC = () => {
         </div>
       </Modal>
     </div>
+    <MenuMobile />
+    </>
   );
 };
 
