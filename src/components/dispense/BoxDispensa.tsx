@@ -1,5 +1,4 @@
 import dispenseData from "@/data/dispense.json";
-import Link from "next/link";
 import { ArrowDownTrayIcon } from "@heroicons/react/24/solid";
 
 export default function BoxDispensa() {
@@ -29,11 +28,10 @@ export default function BoxDispensa() {
             </span>
           </div>
 
-          {/* Pulsante Scarica – apre in nuova scheda */}
+          {/* Pulsante Scarica */}
           <a
             href={item.file}
-            target="_blank"
-            rel="noopener noreferrer"
+            download
             className="px-5 py-2 text-base bg-blue-600 text-white flex items-center justify-center gap-2 hover:bg-blue-500 transition-colors duration-200"
             style={{ borderRadius: "20px" }}
           >
