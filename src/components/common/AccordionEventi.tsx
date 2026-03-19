@@ -3,58 +3,58 @@
 import { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 
-export default function Accordion() {
-  const [openIndex, setOpenIndex] = useState(null);
+type Item = {
+  title: string;
+  content: string;
+};
 
-  const items = [
+export default function Accordion() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const items: Item[] = [
     { title: "Domanda 1", content: "Risposta 1" },
     { title: "Domanda 2", content: "Risposta 2" },
     { title: "Domanda 3", content: "Risposta 3" },
   ];
 
-  const toggle = (index) => {
+  const toggle = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <div className="w-full min-h-screen bg-[#1d2939] text-white">
-      <div className="w-full max-w-4xl mx-auto">
-
-        {items.map((item, index) => {
+    <div className="accordion-container">
+      <div className="accordion-wrapper">
+        {items.map((item: Item, index: number) => {
           const isOpen = openIndex === index;
 
           return (
-            <div key={index} className="border-b border-gray-600">
-
+            <div
+              key={index}
+              className={`accordion-item ${isOpen ? "open" : ""}`}
+            >
               <button
                 onClick={() => toggle(index)}
-                className="flex items-center justify-between w-full p-5 text-left"
+                className="accordion-title"
               >
-                <span className="text-lg font-medium">
-                  {item.title}
-                </span>
+                <span>{item.title}</span>
 
                 <ChevronDownIcon
-                  className={`w-5 h-5 transition-transform duration-300 ${
-                    isOpen ? "rotate-180" : ""
-                  }`}
+                  className={`chevron ${isOpen ? "open" : ""}`}
+                  width={20}
+                  height={20}
                 />
               </button>
 
               <div
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                  isOpen ? "max-h-40 p-5 opacity-100" : "max-h-0 opacity-0"
+                className={`accordion-content ${
+                  isOpen ? "open" : ""
                 }`}
               >
-                <p className="text-gray-300">
-                  {item.content}
-                </p>
+                <p>{item.content}</p>
               </div>
-
             </div>
           );
         })}
-
       </div>
     </div>
   );
