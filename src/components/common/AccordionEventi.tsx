@@ -78,7 +78,7 @@ export default function AccordionEventi() {
               <div className="accordion-header-left">
                 <span className="evento-data">{dataObj.toLocaleDateString("it-IT")}</span>
                 <span className="evento-orario">
-                  {dataObj.toLocaleTimeString("it-IT",{hour:"2-digit",minute:"2-digit"})}
+                  {dataObj.toLocaleTimeString("it-IT", { hour: "2-digit", minute: "2-digit" })}
                 </span>
                 <span className="evento-titolo">{evento.nome}</span>
                 <span className={`evento-badge ${badgeColor(evento.tipologia)}`}>
@@ -93,16 +93,31 @@ export default function AccordionEventi() {
 
             {/* CONTENUTO */}
             <div
-              ref={(el: HTMLDivElement | null) => contentRefs.current[index] = el}
+              ref={(el: HTMLDivElement | null) => {
+                contentRefs.current[index] = el; // ✅ fix TypeScript
+              }}
               className="accordion-content"
             >
               <div className="accordion-content-inner">
                 <p><strong>Luogo:</strong> {evento.luogo}</p>
-                <p><strong>Data:</strong> {dataObj.toLocaleString("it-IT",{day:"2-digit",month:"long",year:"numeric",hour:"2-digit",minute:"2-digit"})}</p>
+                <p>
+                  <strong>Data:</strong>{" "}
+                  {dataObj.toLocaleString("it-IT", {
+                    day: "2-digit",
+                    month: "long",
+                    year: "numeric",
+                    hour: "2-digit",
+                    minute: "2-digit",
+                  })}
+                </p>
                 <p><strong>Indicazioni:</strong> {evento.indicazioni}</p>
                 <p className="evento-descrizione"><strong>Descrizione:</strong> {evento.descrizione}</p>
-                <button type="button" className="map-button" onClick={()=>apriMappe(evento.coordinate)}>
-                  <MapPinIcon className="map-icon"/>
+                <button
+                  type="button"
+                  className="map-button"
+                  onClick={() => apriMappe(evento.coordinate)}
+                >
+                  <MapPinIcon className="map-icon" />
                   Apri su Google Maps
                 </button>
               </div>

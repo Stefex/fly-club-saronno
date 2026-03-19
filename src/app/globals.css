@@ -827,15 +827,10 @@ text-align: -webkit-center;
 /* Card */
 .accordion-card {
   background-color: #1d2939; /* sfondo scuro */
-  border-radius: 1rem;
-  border: 1px solid #374151; /* bordo leggermente visibile */
-  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  border-radius: 1rem;/* bordo leggermente visibile */
   transition: box-shadow 0.3s;
 }
 
-.accordion-card:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
 
 /* Header */
 .accordion-header {
