@@ -23,7 +23,7 @@ export default function Profile() {
            Consiglio Direttivo
           </h1>
         
-            <div className="space-y-6 mb-5">
+            <div className="space-y-6 mb-5 consiglio-direttivo-container">
               <SocioInfo />
             </div>
         </div>

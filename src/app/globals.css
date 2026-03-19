@@ -1010,12 +1010,13 @@ text-align: -webkit-center;
   margin-bottom:50px
 }
 
-.accordion-container{
-  margin-bottom:80px
+
+.principal-box{
+  padding-left:0;
+  padding-right:0
 }
 
-.dispense-container{
-  margin-bottom:80px
+.container-principal{
+  margin-bottom: 80px;
 }
-
 }
