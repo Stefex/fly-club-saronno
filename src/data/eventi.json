@@ -1,0 +1,57 @@
+[
+  {
+    "tipologia": "Concerto",
+    "nome": "Concerto Jazz",
+    "luogo": "Teatro Centrale",
+    "data": "2026-03-25T21:00:00",
+    "indicazioni": "Portare la tessera soci per lo sconto. Ingresso consentito dai 16 anni in su.",
+    "coordinate": {
+      "lat": 45.464211,
+      "lng": 9.191383
+    }
+  },
+  {
+    "tipologia": "Mostra",
+    "nome": "Mostra d'Arte Moderna",
+    "luogo": "Galleria d'Arte Contemporanea",
+    "data": "2026-04-10T10:00:00",
+    "indicazioni": "Aperta tutti i giorni. Biglietto ridotto per studenti e over 65.",
+    "coordinate": {
+      "lat": 45.4671,
+      "lng": 9.1900
+    }
+  },
+  {
+    "tipologia": "Workshop",
+    "nome": "Workshop di Fotografia",
+    "luogo": "Spazio Creativo",
+    "data": "2026-06-05T10:00:00",
+    "indicazioni": "Portare la propria macchina fotografica. Prenotazione obbligatoria.",
+    "coordinate": {
+      "lat": 45.4700,
+      "lng": 9.1800
+    }
+  },
+  {
+    "tipologia": "Teatro",
+    "nome": "Rappresentazione teatrale 'Amleto'",
+    "luogo": "Teatro Comunale",
+    "data": "2026-05-15T20:30:00",
+    "indicazioni": "Posti numerati, presentarsi almeno 30 minuti prima.",
+    "coordinate": {
+      "lat": 45.4655,
+      "lng": 9.1905
+    }
+  },
+  {
+    "tipologia": "Seminario",
+    "nome": "Seminario Motivazionale",
+    "luogo": "Centro Congressi",
+    "data": "2026-07-01T09:00:00",
+    "indicazioni": "Registrazione online obbligatoria. Portare badge ricevuto via email.",
+    "coordinate": {
+      "lat": 45.4680,
+      "lng": 9.1920
+    }
+  }
+]

@@ -815,44 +815,30 @@ aside {
 text-align: -webkit-center;
 }
 
-/* Container */
 .accordion-container {
   width: 100%;
-  min-height: 100vh;
-  background-color: #1d2939;
-  padding: 20px;
-  color: #ffffff;
+  min-height: 100vh;/* sfondo globale */
+  padding:0;
 }
 
-/* Wrapper centrato */
 .accordion-wrapper {
-  max-width: 900px;
   margin: 0 auto;
 }
 
-/* Singolo item = CARD */
+/* Card accordion */
 .accordion-item {
-  background-color: #243244;
+  background-color: #1d2939; /* voci accordion scure */
   border-radius: 12px;
   margin-bottom: 12px;
-  overflow: hidden;
-  border: 1px solid #2f3e53;
-  transition: all 0.2s ease;
 }
 
-/* Hover leggero */
-.accordion-item:hover {
-  background-color: #2a3748;
-}
-
-/* Bottone */
+/* Bottone principale */
 .accordion-title {
   width: 100%;
-  padding: 18px 20px;
-  text-align: left;
-  background: transparent;
+  padding: 16px 20px;
+  background: #1d2939; /* sfondo bottone */
   border: none;
-  color: white;
+  color: #d0d5dd; /* testo chiaro */
   font-size: 16px;
   display: flex;
   justify-content: space-between;
@@ -860,41 +846,236 @@ text-align: -webkit-center;
   cursor: pointer;
 }
 
-/* Chevron */
+.accordion-title:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Chevron rotante */
 .chevron {
   transition: transform 0.3s ease;
 }
 
-/* Rotazione */
 .chevron.open {
   transform: rotate(180deg);
 }
 
-/* Contenuto */
 .accordion-content {
-  overflow: hidden;
   max-height: 0;
-  opacity: 0;
-  transition: all 0.3s ease;
-  padding: 0 20px;
-  color: #cbd5e1;
+  overflow: hidden;
+  color: #d0d5dd;          /* testo chiaro */
+  padding: 0 20px;         /* solo padding laterale quando chiuso */
+  box-sizing: border-box;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  display: block;
 }
 
-/* Aperto */
+/* Quando è aperto */
 .accordion-content.open {
-  max-height: 200px;
-  opacity: 1;
-  padding: 0 20px 20px 20px;
+  max-height: 1000px;      /* sufficiente per contenuto */
+  padding: 24px 20px;      /* ↑ aumentato padding top e bottom */
+  color: #d0d5dd;          /* testo visibile */
 }
 
-/* Effetto separazione extra (shadow soft) */
+.map-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;                /* spazio tra icona e testo */
+  width: 100%;             /* tutta la larghezza dell'accordion */
+  padding: 12px 0;         /* altezza del pulsante */
+  margin-top: 16px;        /* spazio sopra il pulsante */
+  font-size: 14px;         /* testo leggermente piccolo */
+  font-weight: 600;
+  color: #ffffff;          /* testo bianco */
+  background-color: #2563eb; /* blu pulsante */
+  border: none;
+  border-radius: 10px;     /* bordi arrotondati */
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.map-button:hover {
+  background-color: #1d4ed8; /* blu più scuro al passaggio del mouse */
+}
+
+/* Icona dentro il pulsante */
+.map-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Card accordion */
 .accordion-item {
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  background-color: #1d2939; /* sfondo voce */
+  border-radius: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #2f3e53;
+  overflow: hidden;
 }
 
-.accordion-item.open {
-  border-color: #3b82f6;
+/* Bottone principale */
+.accordion-title {
+  width: 100%;
+  padding: 24px 20px;       /* ↑ padding top e bottom aumentato */
+  background: #1d2939;
+  border: none;
+  color: #d0d5dd;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
 }
+
+.accordion-title:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Contenuto accordion */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  color: #d0d5dd;
+  padding: 24px 20px;      /* ↑ padding top e bottom uguale al titolo */
+  box-sizing: border-box;
+  transition: max-height 0.3s ease;
+  display: block;
+}
+
+/* Contenuto aperto */
+.accordion-content.open {
+  max-height: 1000px;      /* sufficiente per contenuto */
+}
+
+.accordion-item {
+  background-color: #1d2939;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #2f3e53;
+}
+
+.accordion-title {
+  width: 100%;
+  padding: 24px 20px; /* padding top e bottom uniforme */
+  background: #1d2939;
+  border: none;
+  color: #d0d5dd;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 24px 20px; /* stesso padding top/bottom del titolo */
+  box-sizing: border-box;
+  color: #d0d5dd;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.chevron {
+  transition: transform 0.3s ease;
+}
+
+.chevron.open {
+  transform: rotate(180deg);
+}
+
+.map-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 0;
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  background-color: #2563eb;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.map-button:hover {
+  background-color: #1d4ed8;
+}
+
+.map-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 0;
+  margin-top: 16px;
+  margin-bottom: 16px; /* <- qui crei lo spazio sotto il pulsante */
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  background-color: #2563eb;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Contenuto accordion chiuso */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 24px 20px 0 20px; /* solo padding top + laterale, niente bottom */
+  box-sizing: border-box;
+  color: #d0d5dd;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+/* Contenuto accordion aperto */
+.accordion-content.open {
+  max-height: 1000px;     /* o meglio: impostato dinamicamente con scrollHeight in useEffect */
+  padding: 24px 20px;    /* padding verticale e laterale */
+}
+
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 24px 20px 0 20px; /* solo padding-top + laterale */
+  box-sizing: border-box;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  color: #d0d5dd;
+}
+
+.map-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 0;
+  /* rimuovi margin-bottom */
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  background-color: #2563eb;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.map-button:hover {
+  background-color: #1d4ed8;
+}
+
+
+
 
 
 

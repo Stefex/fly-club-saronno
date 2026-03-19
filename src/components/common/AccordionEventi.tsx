@@ -1,43 +1,94 @@
 "use client";
 
-import { useState } from "react";
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
+import { useState, useRef, useEffect } from "react";
+import { ChevronDownIcon, MapPinIcon } from "@heroicons/react/24/solid";
+import eventi from "@/data/eventi.json";
 
-type Item = {
-  title: string;
-  content: string;
+type Evento = {
+  tipologia: string;
+  nome: string;
+  luogo: string;
+  data: string;
+  indicazioni: string;
+  coordinate: { lat: number; lng: number };
 };
 
-export default function Accordion() {
+export default function AccordionEventi() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const items: Item[] = [
-    { title: "Domanda 1", content: "Risposta 1" },
-    { title: "Domanda 2", content: "Risposta 2" },
-    { title: "Domanda 3", content: "Risposta 3" },
-  ];
+  const contentRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const toggle = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const apriMappe = (coordinate: { lat: number; lng: number }) => {
+    const url = `https://www.google.com/maps/search/?api=1&query=${coordinate.lat},${coordinate.lng}`;
+    window.open(url, "_blank");
+  };
+
+  const badgeColor = (tipologia: string) => {
+    switch (tipologia.toLowerCase()) {
+      case "concerto":
+        return "bg-red-500";
+      case "mostra":
+        return "bg-purple-500";
+      case "workshop":
+        return "bg-green-500";
+      case "teatro":
+        return "bg-yellow-500";
+      case "seminario":
+        return "bg-blue-500";
+      default:
+        return "bg-gray-500";
+    }
+  };
+
+  // Altezza dinamica con padding top/bottom solo all'apertura
+  useEffect(() => {
+    contentRefs.current.forEach((ref, index) => {
+      if (!ref) return;
+
+      if (openIndex === index) {
+        // Forza altezza 0 e padding
+        ref.style.maxHeight = "0px";
+        ref.style.paddingTop = "0px";
+        ref.style.paddingBottom = "0px";
+
+        // Calcola altezza reale e applica padding
+        requestAnimationFrame(() => {
+          const scrollHeight = ref.scrollHeight;
+          ref.style.maxHeight = scrollHeight + 24 + "px"; // +24px padding-bottom per spazio pulsante
+          ref.style.paddingTop = "24px";
+          ref.style.paddingBottom = "24px";
+        });
+      } else {
+        ref.style.maxHeight = "0px";
+        ref.style.paddingTop = "0px";
+        ref.style.paddingBottom = "0px";
+      }
+    });
+  }, [openIndex]);
+
   return (
     <div className="accordion-container">
       <div className="accordion-wrapper">
-        {items.map((item: Item, index: number) => {
+        {(eventi as Evento[]).map((evento, index: number) => {
           const isOpen = openIndex === index;
 
           return (
-            <div
-              key={index}
-              className={`accordion-item ${isOpen ? "open" : ""}`}
-            >
+            <div key={index} className="accordion-item">
+              {/* Titolo */}
               <button
+                type="button"
                 onClick={() => toggle(index)}
                 className="accordion-title"
               >
-                <span>{item.title}</span>
-
+                <div className="flex items-center gap-2">
+                  <span className="font-bold">{evento.nome}</span>
+                  <span className={`badge ${badgeColor(evento.tipologia)}`}>
+                    {evento.tipologia}
+                  </span>
+                </div>
                 <ChevronDownIcon
                   className={`chevron ${isOpen ? "open" : ""}`}
                   width={20}
@@ -45,12 +96,36 @@ export default function Accordion() {
                 />
               </button>
 
+              {/* Contenuto */}
               <div
-                className={`accordion-content ${
-                  isOpen ? "open" : ""
-                }`}
+                ref={(el) => (contentRefs.current[index] = el)}
+                className="accordion-content"
+                style={{
+                  overflow: "hidden",
+                  transition: "max-height 0.3s ease, padding 0.3s ease",
+                }}
               >
-                <p>{item.content}</p>
+                <p><strong>Luogo:</strong> {evento.luogo}</p>
+                <p>
+                  <strong>Data:</strong>{" "}
+                  {new Date(evento.data).toLocaleString("it-IT", {
+                    day: "2-digit",
+                    month: "long",
+                    year: "numeric",
+                    hour: "2-digit",
+                    minute: "2-digit",
+                  })}
+                </p>
+                <p><strong>Indicazioni:</strong> {evento.indicazioni}</p>
+
+                <button
+                  type="button"
+                  className="map-button"
+                  onClick={() => apriMappe(evento.coordinate)}
+                >
+                  <MapPinIcon className="w-5 h-5" />
+                  Apri Mappe
+                </button>
               </div>
             </div>
           );
