@@ -840,10 +840,22 @@ text-align: -webkit-center;
   color:#d0d5dd;
 }
 
-.menu-item.active{
-  background-color: #344054;
-  border-radius: 0;
+.menu-item{
+  padding-left:0
 }
+
+
+
+.menu-item span{
+  border-radius: 0;
+  font-weight: 300;
+}
+
+.menu-item.active span{
+  border-radius: 0;
+  font-weight: 700;
+}
+
 .menu-item.first-item {
   padding-left:20px
 }
