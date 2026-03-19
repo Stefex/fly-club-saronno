@@ -752,7 +752,8 @@ span.flatpickr-weekday,
 }
 
 .principal-box{
-  background-color: #101828
+  background-color: #101828;
+  padding-top:0
 }
 
 aside {
@@ -1209,7 +1210,7 @@ text-align: -webkit-center;
 @media (max-width: 768px) {
   .logo-sidebar{
   width:15%;
-  margin-bottom:15px
+  margin-bottom:0
   }
   .logo-sidebar-container{
   display: none;
@@ -1218,7 +1219,7 @@ text-align: -webkit-center;
     display: none;
   }
   .border-bottom-1px{
-    border-bottom: 1px solid #344054;
+    border-bottom: 0px solid #344054;
   }
   .logo-sidebar svg{
     display: none;

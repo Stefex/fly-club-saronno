@@ -87,12 +87,9 @@ export default function AccordionEventi() {
                   {new Date(evento.data).toLocaleString("it-IT", {
                     day: "numeric",
                     month: "numeric",
+                    year: "numeric",
                   })}
                 </span>
-                <p class="anno-evento">{" "}
-                  {new Date(evento.data).toLocaleString("it-IT", {
-                    year: "numeric",
-                  })}</p>
                   <span className="font-bold">{evento.nome}</span><br></br>
                   <span className={`badge ${badgeColor(evento.tipologia)}`}>
                     {evento.tipologia}
