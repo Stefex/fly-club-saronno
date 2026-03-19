@@ -848,7 +848,11 @@ text-align: -webkit-center;
 
 .menu-item.active span{
   border-radius: 0;
-  color:#344054;
+  color:rgb(70, 95, 255)
+}
+
+.menu-item.active svg{
+  fill:rgb(70, 95, 255)
 }
 
 .menu-item {
