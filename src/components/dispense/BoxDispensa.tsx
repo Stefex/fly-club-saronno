@@ -29,16 +29,17 @@ export default function BoxDispensa() {
             </span>
           </div>
 
-          {/* Pulsante Scarica con icona */}
-          <Link
+          {/* Pulsante Scarica – apre in nuova scheda */}
+          <a
             href={item.file}
-            download
-            className="px-5 py-2 text-base bg-blue-600 text-white flex items-center justify-center gap-2 hover:bg-blue-500 transition-colors duration-200 scarica-dispensa"
-            style={{ borderRadius: "10px" }}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-2 text-base bg-blue-600 text-white flex items-center justify-center gap-2 hover:bg-blue-500 transition-colors duration-200"
+            style={{ borderRadius: "20px" }}
           >
-            
-            Scarica<ArrowDownTrayIcon className="w-5 h-5" />
-          </Link>
+            <ArrowDownTrayIcon className="w-5 h-5" />
+            Scarica
+          </a>
         </div>
       ))}
     </div>
