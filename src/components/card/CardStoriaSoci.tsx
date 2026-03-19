@@ -52,11 +52,11 @@ export const CardStoriaSoci = () => {
           </div>
            {/* Outline Button with Start Icon */}
            
-            
-            <Button size="md" variant="primary" endIcon={<ArrowRightIcon/>}>
-              Scopri di più
-            </Button>
-        
+            <Link href="/storia">
+              <Button size="md" variant="primary" endIcon={<ArrowRightIcon/>}>
+                Scopri di più
+              </Button>
+            </Link>
   
         </div>
       </div>
