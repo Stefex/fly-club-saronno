@@ -840,20 +840,20 @@ text-align: -webkit-center;
   color:#d0d5dd;
 }
 
-.menu-item{
-  padding-left:0
-}
-
-
-
 .menu-item span{
   border-radius: 0;
   font-weight: 300;
+  font-size:13px
 }
 
 .menu-item.active span{
   border-radius: 0;
-  font-weight: 700;
+  color:#344054;
+}
+
+.menu-item {
+  padding-right:0;
+  padding-left:0
 }
 
 .menu-item.first-item {
