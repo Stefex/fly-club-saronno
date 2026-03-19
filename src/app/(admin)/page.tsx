@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { CardBenvenuto } from "@/components/card/CardBenvenuto";
-import { CardStoriaSoci } from "@/components/card/CardStoriaSoci";
+import { CardStoriaSoci } from "@/components/card/CardHome";
 import React from "react";
 import { MenuMobile } from "@/components/common/MenuMobile";
 

@@ -1,0 +1,18 @@
+{
+  "dispense": [
+    {
+      "titolo": "I Plecotteri",
+      "categoria": "Entomologia",
+      "file": "/dispense/Plecotteri.pdf"
+    },
+    {
+      "titolo": "L'importanza del Catch & Release",
+      "categoria": "Etica",
+      "file": "/dispense/catch_and_release.pdf"
+    },{
+      "titolo": "Entomologia",
+      "categoria": "Entomologia",
+      "file": "/dispense/nozioni-di-entomologia.pdf"
+    }
+  ]
+}

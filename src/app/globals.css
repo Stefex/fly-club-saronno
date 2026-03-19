@@ -930,6 +930,10 @@ text-align: -webkit-center;
 
 .map-icon { width: 1.25rem; height: 1.25rem; }
 
+.scarica-dispensa{
+  font-weight: 600;
+}
+
 
 @media (max-width: 768px) {
   .logo-sidebar{
@@ -998,13 +1002,16 @@ text-align: -webkit-center;
 .data-evento{
   font-size:25px
 }
-.anno-evento{
-}
+
 
 .foto-club{
   margin-top:0px;
   border:0;
   margin-bottom:50px
+}
+
+.accordion-container{
+  margin-bottom:80px
 }
 
 }
