@@ -1148,6 +1148,51 @@ text-align: -webkit-center;
   background-color: #1d4ed8;
 }
 
+@media (max-width: 768px) {
+  .accordion-container {
+    max-width: 100%;
+    padding: 0
+  }
+
+  .accordion-title {
+    font-size: 13px;
+    padding: 14px 16px;
+  }
+
+  .badge {
+    font-size: 11px;
+    padding: 2px 6px;
+  }
+
+  .map-button {
+    font-size: 13px;
+    padding: 10px 0;
+  }
+}
+
+/* Responsive: smartphone */
+@media (max-width: 480px) {
+  .accordion-title {
+    font-size: 14px;
+    padding: 12px 12px;
+  }
+
+  .badge {
+        padding: 2px 5px;
+        font-size: 10px;
+    }
+
+   
+
+  .map-button {
+    font-size: 12px;
+    padding: 8px 0;
+  }
+
+  .accordion-content {
+    padding: 0 12px; /* contenuto più stretto su mobile */
+  }
+}
 
 
 

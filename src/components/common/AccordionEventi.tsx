@@ -81,8 +81,8 @@ export default function AccordionEventi() {
                 onClick={() => toggle(index)}
                 className="accordion-title"
               >
-                <div className="flex items-center gap-2">
-                  <span className="font-bold">{evento.nome}</span>
+                <div className="flex items-center gap-2 badge-title-container">
+                  <span className="font-bold">{evento.nome}</span><br></br>
                   <span className={`badge ${badgeColor(evento.tipologia)}`}>
                     {evento.tipologia}
                   </span>
