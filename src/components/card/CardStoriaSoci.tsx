@@ -73,7 +73,7 @@ export const CardStoriaSoci = () => {
               Scopri gli
             </span>
             <h4 className="mt-2 font-bold text-title-sm">
-              Eventi in programma
+              Eventi
             </h4>
           </div>
            {/* Outline Button with Start Icon */}
