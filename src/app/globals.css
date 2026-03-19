@@ -816,395 +816,124 @@ aside {
 text-align: -webkit-center;
 }
 
+/* Container */
 .accordion-container {
-  width: 100%;
-  min-height: 100vh;/* sfondo globale */
-  padding:0;
-}
-
-.accordion-wrapper {
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-/* Card accordion */
-.accordion-item {
-  background-color: #1d2939; /* voci accordion scure */
-  border-radius: 12px;
-  margin-bottom: 12px;
+/* Card */
+.accordion-card {
+  background-color: #1d2939; /* sfondo scuro */
+  border-radius: 1rem;
+  border: 1px solid #374151; /* bordo leggermente visibile */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  transition: box-shadow 0.3s;
 }
 
-/* Bottone principale */
-.accordion-title {
-  width: 100%;
-  padding: 16px 20px;
-  background: #1d2939; /* sfondo bottone */
-  border: none;
-  color: #d0d5dd; /* testo chiaro */
-  font-size: 16px;
+.accordion-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Header */
+.accordion-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-}
-
-.accordion-title:hover {
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
-/* Chevron rotante */
-.chevron {
-  transition: transform 0.3s ease;
-}
-
-.chevron.open {
-  transform: rotate(180deg);
-}
-
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  color: #d0d5dd;          /* testo chiaro */
-  padding: 0 20px;         /* solo padding laterale quando chiuso */
-  box-sizing: border-box;
-  transition: max-height 0.3s ease, padding 0.3s ease;
-  display: block;
-}
-
-/* Quando è aperto */
-.accordion-content.open {
-  max-height: 1000px;      /* sufficiente per contenuto */
-  padding: 24px 20px;      /* ↑ aumentato padding top e bottom */
-  color: #d0d5dd;          /* testo visibile */
-}
-
-.map-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;                /* spazio tra icona e testo */
-  width: 100%;             /* tutta la larghezza dell'accordion */
-  padding: 12px 0;         /* altezza del pulsante */
-  margin-top: 16px;        /* spazio sopra il pulsante */
-  font-size: 14px;         /* testo leggermente piccolo */
-  font-weight: 600;
-  color: #ffffff;          /* testo bianco */
-  background-color: #2563eb; /* blu pulsante */
-  border: none;
-  border-radius: 10px;     /* bordi arrotondati */
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.map-button:hover {
-  background-color: #1d4ed8; /* blu più scuro al passaggio del mouse */
-}
-
-/* Icona dentro il pulsante */
-.map-button svg {
-  width: 20px;
-  height: 20px;
-}
-
-/* Card accordion */
-.accordion-item {
-  background-color: #1d2939; /* sfondo voce */
-  border-radius: 12px;
-  margin-bottom: 12px;
-  border: 1px solid #2f3e53;
-  overflow: hidden;
-}
-
-/* Bottone principale */
-.accordion-title {
+  align-items: flex-start;
   width: 100%;
-  padding: 24px 20px;       /* ↑ padding top e bottom aumentato */
-  background: #1d2939;
-  border: none;
-  color: #d0d5dd;
-  font-size: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-}
-
-.accordion-title:hover {
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
-/* Contenuto accordion */
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  color: #d0d5dd;
-  padding: 24px 20px;      /* ↑ padding top e bottom uguale al titolo */
-  box-sizing: border-box;
-  transition: max-height 0.3s ease;
-  display: block;
-}
-
-/* Contenuto aperto */
-.accordion-content.open {
-  max-height: 1000px;      /* sufficiente per contenuto */
-}
-
-.accordion-item {
-  background-color: #1d2939;
-  border-radius: 12px;
-  margin-bottom: 12px;
-  border: 1px solid #2f3e53;
-}
-
-.accordion-title {
-  width: 100%;
-  padding: 24px 20px; /* padding top e bottom uniforme */
-  background: #1d2939;
-  border: none;
-  color: #d0d5dd;
-  font-size: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-}
-
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  padding: 24px 20px; /* stesso padding top/bottom del titolo */
-  box-sizing: border-box;
-  color: #d0d5dd;
-  transition: max-height 0.3s ease, padding 0.3s ease;
-}
-
-.chevron {
-  transition: transform 0.3s ease;
-}
-
-.chevron.open {
-  transform: rotate(180deg);
-}
-
-.map-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: 100%;
-  padding: 12px 0;
-  margin-top: 16px;
-  font-size: 14px;
-  font-weight: 600;
-  color: white;
-  background-color: #2563eb;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.map-button:hover {
-  background-color: #1d4ed8;
-}
-
-.map-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: 100%;
-  padding: 12px 0;
-  margin-top: 16px;
-  margin-bottom: 16px; /* <- qui crei lo spazio sotto il pulsante */
-  font-size: 14px;
-  font-weight: 600;
-  color: white;
-  background-color: #2563eb;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-/* Contenuto accordion chiuso */
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  padding: 24px 20px 0 20px; /* solo padding top + laterale, niente bottom */
-  box-sizing: border-box;
-  color: #d0d5dd;
-  transition: max-height 0.3s ease, padding 0.3s ease;
-}
-
-/* Contenuto accordion aperto */
-.accordion-content.open {
-  max-height: 1000px;     /* o meglio: impostato dinamicamente con scrollHeight in useEffect */
-  padding: 24px 20px;    /* padding verticale e laterale */
-}
-
-
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  padding: 24px 20px 0 20px; /* solo padding-top + laterale */
-  box-sizing: border-box;
-  transition: max-height 0.3s ease, padding 0.3s ease;
-  color: #d0d5dd;
-}
-
-.map-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: 100%;
-  padding: 12px 0;
-  /* rimuovi margin-bottom */
-  margin-top: 16px;
-  font-size: 14px;
-  font-weight: 600;
-  color: white;
-  background-color: #2563eb;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.map-button:hover {
-  background-color: #1d4ed8;
-}
-
-
-
-.accordion-container {
-  width: 100%;
-  margin: 0 auto;
-  font-family: sans-serif;
-}
-
-.accordion-item {
-  border-bottom: 1px solid #2c3340;
-  background-color: #1d2939;
-  color: #d0d5dd;
-}
-
-.accordion-title {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 20px;
-  font-size: 16px;
-  font-weight: 600;
-  background: transparent;
+  padding: 1rem 1.25rem;
+  background: none;
   border: none;
   cursor: pointer;
 }
 
-.badge {
-  padding: 2px 8px;
-  border-radius: 12px;
-  font-size: 12px;
+.accordion-header-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+}
+
+/* Elementi header */
+.evento-data { font-size: 1.5rem; font-weight: 700; line-height: 1; color: #d0d5dd; }
+.evento-orario { font-size: 0.875rem; color: #a1a6b8; }
+.evento-titolo { font-weight: 600; font-size: 1rem; color: #d0d5dd; }
+.evento-badge {
+  font-size: 0.75rem;
   font-weight: 500;
-  color: white;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  display: inline-block;
+  margin-top: 0.25rem;
 }
 
-.chevron {
-  transition: transform 0.3s ease;
+/* Badge colori rimangono vivi */
+.badge-red { background-color: #ef4444; }
+.badge-purple { background-color: #8b5cf6; }
+.badge-green { background-color: #22c55e; }
+.badge-yellow { background-color: #eab308; }
+.badge-blue { background-color: #3b82f6; }
+.badge-gray { background-color: #9ca3af; }
+
+/* Chevron */
+.accordion-chevron {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #9ca3af;
+  transition: transform 0.3s;
 }
 
-.chevron.open {
+.accordion-chevron.open {
   transform: rotate(180deg);
 }
 
+/* Contenuto */
 .accordion-content {
-  max-height: 0;
   overflow: hidden;
-  padding: 0 20px; /* padding-top/bottom applicato via JS */
-  box-sizing: border-box;
-  color: #d0d5dd;
+  padding-left: 16px;
+  padding-right:16px;
+  padding-top:0!important;
   transition: max-height 0.3s ease, padding 0.3s ease;
 }
 
-.map-button {
+.accordion-content-inner {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0 0.5rem 0 0.5rem;
+  font-size: 0.875rem;
+  color: #d0d5dd; /* testo chiaro */
+}
+
+/* Descrizione */
+.evento-descrizione { line-height: 1.5; }
+
+/* Pulsante mappa */
+.map-button {
+  margin-top: 0.5rem;
+  display: flex;
   justify-content: center;
-  gap: 8px;
+  align-items: center;
+  gap: 0.5rem;
   width: 100%;
-  padding: 12px 0;
-  margin-top: 16px; /* spazio sopra pulsante */
-  font-size: 14px;
-  font-weight: 600;
-  color: white;
-  background-color: #2563eb;
+  background-color: #2563eb; /* contrasto sullo sfondo scuro */
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.875rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 1rem;
   border: none;
-  border-radius: 20px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: all 0.2s;
 }
 
-.map-button:hover {
-  background-color: #1d4ed8;
-}
+.map-button:hover { background-color: #3b82f6; }
+.map-button:active { transform: scale(0.97); }
 
-.foto-club{
-  margin-top:40px;
-  border:0
-}
-
-.foto-club img{
-  border:0
-}
-
-@media (max-width: 768px) {
-  .accordion-container {
-    max-width: 100%;
-    padding: 0
-  }
-
-  .accordion-title {
-    font-size: 13px;
-    padding: 14px 16px;
-  }
-
-  .badge {
-    font-size: 11px;
-    padding: 2px 6px;
-  }
-
-  .map-button {
-    font-size: 13px;
-    padding: 10px 0;
-  }
-}
-
-/* Responsive: smartphone */
-@media (max-width: 480px) {
-  .accordion-title {
-    font-size: 14px;
-    padding: 12px 12px;
-  }
-
-  .badge {
-        padding: 2px 5px;
-        font-size: 10px;
-    }
-
-   
-
-  .map-button {
-    font-size: 12px;
-    padding: 8px 0;
-  }
-
-  .accordion-content {
-    padding: 0 12px; /* contenuto più stretto su mobile */
-  }
-}
-
-
+.map-icon { width: 1.25rem; height: 1.25rem; }
 
 
 @media (max-width: 768px) {

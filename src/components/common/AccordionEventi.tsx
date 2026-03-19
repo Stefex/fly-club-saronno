@@ -10,6 +10,7 @@ type Evento = {
   luogo: string;
   data: string;
   indicazioni: string;
+  descrizione: string;
   coordinate: { lat: number; lng: number };
 };
 
@@ -28,22 +29,15 @@ export default function AccordionEventi() {
 
   const badgeColor = (tipologia: string) => {
     switch (tipologia.toLowerCase()) {
-      case "concerto":
-        return "bg-red-500";
-      case "mostra":
-        return "bg-purple-500";
-      case "workshop":
-        return "bg-green-500";
-      case "teatro":
-        return "bg-yellow-500";
-      case "seminario":
-        return "bg-blue-500";
-      default:
-        return "bg-gray-500";
+      case "concerto": return "badge-red";
+      case "mostra": return "badge-purple";
+      case "workshop": return "badge-green";
+      case "teatro": return "badge-yellow";
+      case "seminario": return "badge-blue";
+      default: return "badge-gray";
     }
   };
 
-  // Altezza dinamica con padding top/bottom solo all'apertura
   useEffect(() => {
     contentRefs.current.forEach((ref, index) => {
       if (!ref) return;
@@ -55,9 +49,9 @@ export default function AccordionEventi() {
 
         requestAnimationFrame(() => {
           const scrollHeight = ref.scrollHeight;
-          ref.style.maxHeight = scrollHeight + 24 + "px"; // padding-bottom incluso
-          ref.style.paddingTop = "24px";
-          ref.style.paddingBottom = "24px";
+          ref.style.maxHeight = scrollHeight + 32 + "px";
+          ref.style.paddingTop = "16px";
+          ref.style.paddingBottom = "16px";
         });
       } else {
         ref.style.maxHeight = "0px";
@@ -69,78 +63,53 @@ export default function AccordionEventi() {
 
   return (
     <div className="accordion-container">
-      <div className="accordion-wrapper">
-        {(eventi as Evento[]).map((evento, index: number) => {
-          const isOpen = openIndex === index;
+      {(eventi as Evento[]).map((evento, index: number) => {
+        const isOpen = openIndex === index;
+        const dataObj = new Date(evento.data);
 
-          return (
-            <div key={index} className="accordion-item">
-              {/* Titolo */}
-              <button
-                type="button"
-                onClick={() => toggle(index)}
-                className="accordion-title"
-              >
-                <div className="flex items-center gap-2 badge-title-container">
-                  <span className="data-evento">
-                  {" "}
-                  {new Date(evento.data).toLocaleString("it-IT", {
-                    day: "numeric",
-                    month: "numeric",
-                    year: "numeric",
-                  })}
+        return (
+          <div key={index} className="accordion-card">
+            {/* HEADER */}
+            <button
+              type="button"
+              onClick={() => toggle(index)}
+              className="accordion-header"
+            >
+              <div className="accordion-header-left">
+                <span className="evento-data">{dataObj.toLocaleDateString("it-IT")}</span>
+                <span className="evento-orario">
+                  {dataObj.toLocaleTimeString("it-IT",{hour:"2-digit",minute:"2-digit"})}
                 </span>
-                  <span className="font-bold">{evento.nome}</span><br></br>
-                  <span className={`badge ${badgeColor(evento.tipologia)}`}>
-                    {evento.tipologia}
-                  </span>
-                  
-                 
-                </div>
-                <ChevronDownIcon
-                  className={`chevron ${isOpen ? "open" : ""}`}
-                  width={20}
-                  height={20}
-                />
-              </button>
+                <span className="evento-titolo">{evento.nome}</span>
+                <span className={`evento-badge ${badgeColor(evento.tipologia)}`}>
+                  {evento.tipologia}
+                </span>
+              </div>
 
-              {/* Contenuto */}
-              <div
-                ref={(el: HTMLDivElement | null) => {
-                  contentRefs.current[index] = el;
-                }}
-                className="accordion-content"
-                style={{
-                  overflow: "hidden",
-                  transition: "max-height 0.3s ease, padding 0.3s ease",
-                }}
-              >
+              <ChevronDownIcon
+                className={`accordion-chevron ${isOpen ? "open" : ""}`}
+              />
+            </button>
+
+            {/* CONTENUTO */}
+            <div
+              ref={(el: HTMLDivElement | null) => contentRefs.current[index] = el}
+              className="accordion-content"
+            >
+              <div className="accordion-content-inner">
                 <p><strong>Luogo:</strong> {evento.luogo}</p>
-                <p>
-                  <strong>Data:</strong>{" "}
-                  {new Date(evento.data).toLocaleString("it-IT", {
-                    day: "2-digit",
-                    month: "long",
-                    year: "numeric",
-                    hour: "2-digit",
-                    minute: "2-digit",
-                  })}
-                </p>
+                <p><strong>Data:</strong> {dataObj.toLocaleString("it-IT",{day:"2-digit",month:"long",year:"numeric",hour:"2-digit",minute:"2-digit"})}</p>
                 <p><strong>Indicazioni:</strong> {evento.indicazioni}</p>
-
-                <button
-                  type="button"
-                  className="map-button"
-                  onClick={() => apriMappe(evento.coordinate)}
-                >
-                  <MapPinIcon className="w-5 h-5" />
-                  Apri Mappe
+                <p className="evento-descrizione"><strong>Descrizione:</strong> {evento.descrizione}</p>
+                <button type="button" className="map-button" onClick={()=>apriMappe(evento.coordinate)}>
+                  <MapPinIcon className="map-icon"/>
+                  Apri su Google Maps
                 </button>
               </div>
             </div>
-          );
-        })}
-      </div>
+          </div>
+        );
+      })}
     </div>
   );
 }

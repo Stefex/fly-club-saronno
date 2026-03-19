@@ -87,6 +87,86 @@ export const CardStoriaSoci = () => {
         </div>
       </div>
       {/* <!-- Metric Item End --> */}
+       <div className="rounded-2xl border p-5 md:p-6 box-card">
+        <div className="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-xl dark:bg-gray-800">
+          <DocsIcon className="text-gray-800 size-6 dark:text-white/90" />
+        </div>
+
+        <div className="flex items-end justify-between mt-5 ">
+          <div>
+            <span className="text-sm " >
+              Scopri le Nostre
+            </span>
+            <h4 className="mt-2 font-bold text-title-sm">
+              Mosche
+            </h4>
+          </div>
+           {/* Outline Button with Start Icon */}
+           
+            
+            <Button size="md" variant="primary" endIcon={<ArrowRightIcon/>}>
+              Scopri di più
+            </Button>
+        
+  
+        </div>
+
+        
+      </div>
+
+       <div className="rounded-2xl border p-5 md:p-6 box-card">
+        <div className="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-xl dark:bg-gray-800">
+          <DocsIcon className="text-gray-800 size-6 dark:text-white/90" />
+        </div>
+
+        <div className="flex items-end justify-between mt-5 ">
+          <div>
+            <span className="text-sm " >
+              Scarica le nostre
+            </span>
+            <h4 className="mt-2 font-bold text-title-sm">
+              Dispense
+            </h4>
+          </div>
+           {/* Outline Button with Start Icon */}
+           
+            
+            <Button size="md" variant="primary" endIcon={<ArrowRightIcon/>}>
+              Scopri di più
+            </Button>
+        
+  
+        </div>
+
+        
+      </div>
+
+       <div className="rounded-2xl border p-5 md:p-6 box-card">
+        <div className="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-xl dark:bg-gray-800">
+          <DocsIcon className="text-gray-800 size-6 dark:text-white/90" />
+        </div>
+
+        <div className="flex items-end justify-between mt-5 ">
+          <div>
+            <span className="text-sm " >
+              I nostri
+            </span>
+            <h4 className="mt-2 font-bold text-title-sm">
+              Contatti
+            </h4>
+          </div>
+           {/* Outline Button with Start Icon */}
+           
+            
+            <Button size="md" variant="primary" endIcon={<ArrowRightIcon/>}>
+              Scopri di più
+            </Button>
+        
+  
+        </div>
+
+        
+      </div>
     </div>
   );
 };
