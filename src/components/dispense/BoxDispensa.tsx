@@ -31,12 +31,11 @@ export default function BoxDispensa() {
           {/* Pulsante Scarica */}
           <a
             href={item.file}
-            download
             className="px-5 py-2 text-base bg-blue-600 text-white flex items-center justify-center gap-2 hover:bg-blue-500 transition-colors duration-200"
             style={{ borderRadius: "20px" }}
           >
             <ArrowDownTrayIcon className="w-5 h-5" />
-            Scarica il file
+            Scarica
           </a>
         </div>
       ))}
