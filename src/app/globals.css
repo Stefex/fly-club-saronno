@@ -1148,6 +1148,15 @@ text-align: -webkit-center;
   background-color: #1d4ed8;
 }
 
+.foto-club{
+  margin-top:40px;
+  border:0
+}
+
+.foto-club img{
+  border:0
+}
+
 @media (max-width: 768px) {
   .accordion-container {
     max-width: 100%;
@@ -1200,6 +1209,7 @@ text-align: -webkit-center;
 @media (max-width: 768px) {
   .logo-sidebar{
   width:15%;
+  margin-bottom:15px
   }
   .logo-sidebar-container{
   display: none;
@@ -1245,4 +1255,31 @@ text-align: -webkit-center;
 .menu-item.first-item {
   padding-left:20px
 }
+.box-storia{
+  background-color: transparent;
+  padding:0;
+  margin-bottom: 40px;
+  text-align: justify;
+  color:#d0d5dd;
+
+}
+.point-sidebar{
+  display:none
+}
+.sidebar-mobile{
+  justify-content: center;
+}
+
+.data-evento{
+  font-size:25px
+}
+.anno-evento{
+}
+
+.foto-club{
+  margin-top:0px;
+  border:0;
+  margin-bottom:50px
+}
+
 }

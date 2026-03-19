@@ -1,5 +1,8 @@
 "use client";
 import { MenuMobile } from "../common/MenuMobile";
+import ImgStoria from "@/components/ui/images/ImgStoria";
+import ThreeColumnImageGrid from "@/components/ui/images/ThreeColumnImageGrid";
+import TwoColumnImageGrid from "@/components/ui/images/TwoColumnImageGrid";
 
 
 export const BoxStoria = () => {
@@ -7,7 +10,7 @@ export const BoxStoria = () => {
     <>
     <div className="grid">
       {/* <!-- Metric Item Start --> */}
-      <div className="rounded-2xl p-5 md:p-6 box-card"> 
+      <div className="rounded-2xl p-5 md:p-6 sm:p-0 box-card box-storia"> 
         Il Fly Angling Club Sezione di Saronno è stato fondato nel 1985 da amici che desideravano 
         trasmettere ad altre persone 
         la loro passione per una disciplina nobile come la pesca a mosca. In oltre trent’anni di 
@@ -29,6 +32,7 @@ Come l’acqua che passa, molte persone di ogni età sono passate negli anni, di
 moscaioli grazie ai corsi annuali di lancio, costruzione ed etica di pesca.<br></br>
 Molti di loro sono diventati amici accomunati da questa bellissima pesca.
     </div>
+     <ImgStoria/>
 </div>
 <MenuMobile />
 </>

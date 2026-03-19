@@ -82,10 +82,23 @@ export default function AccordionEventi() {
                 className="accordion-title"
               >
                 <div className="flex items-center gap-2 badge-title-container">
+                  <span className="data-evento">
+                  {" "}
+                  {new Date(evento.data).toLocaleString("it-IT", {
+                    day: "numeric",
+                    month: "numeric",
+                  })}
+                </span>
+                <p class="anno-evento">{" "}
+                  {new Date(evento.data).toLocaleString("it-IT", {
+                    year: "numeric",
+                  })}</p>
                   <span className="font-bold">{evento.nome}</span><br></br>
                   <span className={`badge ${badgeColor(evento.tipologia)}`}>
                     {evento.tipologia}
                   </span>
+                  
+                 
                 </div>
                 <ChevronDownIcon
                   className={`chevron ${isOpen ? "open" : ""}`}

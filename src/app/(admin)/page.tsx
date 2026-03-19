@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { CardBenvenuto } from "@/components/card/CardBenvenuto";
 import { CardStoriaSoci } from "@/components/card/CardStoriaSoci";
 import React from "react";
-import RecentOrders from "@/components/card/RecentOrders";
 import { MenuMobile } from "@/components/common/MenuMobile";
 
 export const metadata: Metadata = {
@@ -24,9 +23,6 @@ export default function Home() {
 
       </div>
 
-      <div className="col-span-12 xl:col-span-7">
-        <RecentOrders />
-      </div>
     </div>
     <MenuMobile />
     </>
