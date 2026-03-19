@@ -1015,14 +1015,13 @@ text-align: -webkit-center;
 
 
 .principal-box{
-  padding-left:0;
-  padding-right:0
+  padding:0
 }
 
 .container-principal{
   margin-bottom: 80px;
 }
 .card-container{
-  margin-bottom:45px
+  margin-bottom:20px
 }
 }
