@@ -6,7 +6,7 @@ export default function ImgStoria() {
     <div className="relative foto-club">
       <div className="overflow-hidden">
         <Image
-          src="/images/grid-image/club_foto.jpg"
+          src="/images/img/club_foto.jpg"
           alt="Cover"
           className="w-full border border-gray-200 rounded-xl dark:border-gray-800"
           width={1054}
