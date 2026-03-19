@@ -49,15 +49,13 @@ export default function AccordionEventi() {
       if (!ref) return;
 
       if (openIndex === index) {
-        // Forza altezza 0 e padding
         ref.style.maxHeight = "0px";
         ref.style.paddingTop = "0px";
         ref.style.paddingBottom = "0px";
 
-        // Calcola altezza reale e applica padding
         requestAnimationFrame(() => {
           const scrollHeight = ref.scrollHeight;
-          ref.style.maxHeight = scrollHeight + 24 + "px"; // +24px padding-bottom per spazio pulsante
+          ref.style.maxHeight = scrollHeight + 24 + "px"; // padding-bottom incluso
           ref.style.paddingTop = "24px";
           ref.style.paddingBottom = "24px";
         });
@@ -98,7 +96,9 @@ export default function AccordionEventi() {
 
               {/* Contenuto */}
               <div
-                ref={(el) => (contentRefs.current[index] = el)}
+                ref={(el: HTMLDivElement | null) => {
+                  contentRefs.current[index] = el;
+                }}
                 className="accordion-content"
                 style={{
                   overflow: "hidden",

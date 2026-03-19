@@ -1076,6 +1076,78 @@ text-align: -webkit-center;
 
 
 
+.accordion-container {
+  width: 100%;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #2c3340;
+  background-color: #1d2939;
+  color: #d0d5dd;
+}
+
+.accordion-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.badge {
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+}
+
+.chevron {
+  transition: transform 0.3s ease;
+}
+
+.chevron.open {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px; /* padding-top/bottom applicato via JS */
+  box-sizing: border-box;
+  color: #d0d5dd;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.map-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 0;
+  margin-top: 16px; /* spazio sopra pulsante */
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  background-color: #2563eb;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.map-button:hover {
+  background-color: #1d4ed8;
+}
+
 
 
 
