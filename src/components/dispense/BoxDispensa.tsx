@@ -14,7 +14,7 @@ export default function BoxDispensa() {
   };
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 dispense-container">
       {dispense.map((item, index) => (
         <div
           key={index}
