@@ -36,7 +36,7 @@ export default function BoxDispensa() {
             style={{ borderRadius: "20px" }}
           >
             <ArrowDownTrayIcon className="w-5 h-5" />
-            Scarica
+            Scarica il file
           </a>
         </div>
       ))}
