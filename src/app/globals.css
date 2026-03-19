@@ -293,6 +293,9 @@
 }
 
 /* third-party libraries CSS */
+html{
+  background-color:#101828;;
+}
 .apexcharts-legend-text {
   @apply !text-gray-700 dark:!text-gray-400;
 }
@@ -1018,5 +1021,8 @@ text-align: -webkit-center;
 
 .container-principal{
   margin-bottom: 80px;
+}
+.card-container{
+  margin-bottom:45px
 }
 }

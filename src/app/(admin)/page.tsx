@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-    <div className="grid md:gap-6 w-full">
+    <div className="grid md:gap-6 w-full card-container">
        <div className="col-span-12 space-y-6 xl:col-span-7">
         <CardBenvenuto/>
 
