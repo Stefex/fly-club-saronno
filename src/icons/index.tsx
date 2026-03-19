@@ -52,8 +52,10 @@ import ChatIcon from "./chat.svg";
 import MoreDotIcon from "./more-dot.svg";
 import BellIcon from "./bell.svg";
 import HamburgerMenu from "./hamburger-menu.svg";
+import FlyIcon from "./mosche.svg";
 
 export {
+  FlyIcon,
   HamburgerMenu,
   DownloadIcon,
   BellIcon,

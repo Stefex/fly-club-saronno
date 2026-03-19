@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Badge from "../ui/badge/Badge";
-import { ArrowDownIcon,  ArrowRightIcon, BoxIconLine, GroupIcon, DocsIcon } from "@/icons";
+import { ArrowDownIcon,CalenderIcon, FlyIcon, MailIcon,  ArrowRightIcon, BoxIconLine, GroupIcon, DocsIcon } from "@/icons";
 import ComponentCard from "@/components/common/ComponentCard";
 import PageBreadcrumb from "@/components/common/PageBreadCrumb";
 import Button from "@/components/ui/button/Button"; 
@@ -64,7 +64,7 @@ export const CardStoriaSoci = () => {
       {/* <!-- Metric Item Start --> */}
       <div className="rounded-2xl border p-5 md:p-6 box-card">
         <div className="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-xl dark:bg-gray-800">
-          <DocsIcon className="text-gray-800 size-6 dark:text-white/90" />
+          <CalenderIcon className="text-gray-800 size-6 dark:text-white/90" />
         </div>
 
         <div className="flex items-end justify-between mt-5 ">
@@ -89,7 +89,7 @@ export const CardStoriaSoci = () => {
       {/* <!-- Metric Item End --> */}
        <div className="rounded-2xl border p-5 md:p-6 box-card">
         <div className="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-xl dark:bg-gray-800">
-          <DocsIcon className="text-gray-800 size-6 dark:text-white/90" />
+          <FlyIcon className="text-gray-800 size-6 dark:text-white/90" />
         </div>
 
         <div className="flex items-end justify-between mt-5 ">
@@ -143,7 +143,7 @@ export const CardStoriaSoci = () => {
 
        <div className="rounded-2xl border p-5 md:p-6 box-card">
         <div className="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-xl dark:bg-gray-800">
-          <DocsIcon className="text-gray-800 size-6 dark:text-white/90" />
+          <MailIcon className="text-gray-800 size-6 dark:text-white/90" />
         </div>
 
         <div className="flex items-end justify-between mt-5 ">

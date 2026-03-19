@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState,useCallback } from "react";
 import Link from "next/link";
+import DocumentIcon from "@heroicons/react/24/solid";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useSidebar } from "../context/SidebarContext";
@@ -17,8 +18,13 @@ import {
   PlugInIcon,
   TableIcon,
   UserCircleIcon,
+   PaperPlaneIcon,
+   MailIcon,
+   DocsIcon,
+   FlyIcon
 } from "../icons/index";
-import SidebarWidget from "./SidebarWidget";
+import { DocumentMagnifyingGlassIcon } from "@heroicons/react/24/solid";
+
 
 type NavItem = {
   name: string;
@@ -34,32 +40,34 @@ const navItems: NavItem[] = [
     path: "/",
   },
   {
+    icon: <DocsIcon />,
+    name: "Storia",
+    path: "/storia",
+  },
+  {
     icon: <GroupIcon />,
     name: "Consiglio Direttivo",
     path: "/consiglio-direttivo",
   },
   {
     icon: <CalenderIcon />,
-    name: "Calendario",
+    name: "Eventi",
     path: "/calendar",
   },
   {
-    name: "Forms",
-    icon: <ListIcon />,
-    subItems: [{ name: "Form Elements", path: "/form-elements", pro: false }],
+    icon: <DocsIcon />,
+    name: "Dispense",
+    path: "/dispense",
   },
   {
-    name: "Tables",
-    icon: <TableIcon />,
-    subItems: [{ name: "Basic Tables", path: "/basic-tables", pro: false }],
+    icon: <FlyIcon />,
+    name: "Mosche",
+    path: "/dispense",
   },
   {
-    name: "Pages",
-    icon: <PageIcon />,
-    subItems: [
-      { name: "Blank Page", path: "/blank", pro: false },
-      { name: "404 Error", path: "/error-404", pro: false },
-    ],
+    icon: <MailIcon />,
+    name: "Contatti",
+    path: "/dispense",
   },
 ];
 
@@ -344,7 +352,7 @@ const AppSidebar: React.FC = () => {
             
           </div>
         </nav>
-        {isExpanded || isHovered || isMobileOpen ? <SidebarWidget /> : null}
+ 
       </div>
     </aside>
   );
